@@ -19,7 +19,7 @@ Proxmox VE and Proxmox Backup Server don't call `sendmail` in the way the other 
 - header `Authorization: Bearer {{ secrets.token }}`, with the token in the target's secrets field instead of in plain text
 - body `[{{ fields.hostname }}] {{ title }}: {{ message }}`
 
-The existing notification matchers were repointed from the old sendmail target to the webhook. Each was confirmed with a real backup event, not the generic Test button, because the Test button proves the target exists and a real event proves the matcher reaches it.
+The existing notification matchers were repointed from the old sendmail target to the webhook. Each was confirmed with a real backup event, not the generic Test button, because the Test button proves the target exists and a real event proves the matcher reaches it. The backup system that sends them is in [backups-nobody-watches](https://github.com/zacharyrichter/backups-nobody-watches).
 
 ## A sender that can only speak mail
 
